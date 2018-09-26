@@ -1,0 +1,49 @@
+{
+    "name": "october/swoole-plugin",
+    "type": "october-plugin",
+    "description": "Add support for Swoole to OctoberCMS",
+    "homepage": "https://octobercms.com/plugin/october-swoole",
+    "keywords": ["october", "octobercms", "laravel", "swoole"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tamer Hassan",
+            "email": "tam.hassan7@gmail.com",
+            "role": "Author"
+        },
+        {
+            "name": "Luke Towers",
+            "email": "OctoberCMS",
+            "role": "Maintainer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "ext-swoole": ">=4.0.0",
+        "scil/laravel-fly": "v0.8"
+    },
+    "require-dev": {
+        "eaglewu/swoole-ide-helper": "dev-master",
+        "nunomaduro/collision": "^2.0",
+        "phpunit/phpunit": "^7.0",
+        "mockery/mockery": "^1.0",
+        "orchestra/testbench-core": "^3.6"
+    },
+    "suggest": {
+        "ext-inotify": ">=2.0.0"
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "OctoberFly\\Providers\\ServiceProvider"
+            ],
+            "aliases": {
+            },
+            "dont-discover": [
+                "hhxsv5/laravel-s",
+                "scil/laravel-fly"
+            ]
+        }
+    }
+}
